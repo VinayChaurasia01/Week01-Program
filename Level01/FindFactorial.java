@@ -1,0 +1,33 @@
+/*
+Write a Program to find the factorial of an integer entered by the user.
+Hint => 
+For example, the factorial of 4 is 1 * 2 * 3 * 4 which is 24.
+Take an integer input from the user and assign it to the variable. Check the user has entered a positive integer.
+Using a while loop, compute the factorial.
+Print the factorial at the end.
+*/
+
+import java.util.Scanner;
+
+public class FindFactorial {
+    public static void main(String[] args) {
+        // Create a Scanner object for user input
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Enter a positive integer: ");
+        int number = scan.nextInt();
+
+            //variables for factorial computation
+            int factorial = 1; // Factorial starts with 1 as a neutral multiplier
+            int i = 1;         // Iterator starting at 1
+
+            // Calculate factorial using a while loop
+            while (i <= number) {
+                factorial *= i; // Multiply factorial by the current value of i
+                i++;            // Increment i
+            }
+
+            // Print the computed factorial
+            System.out.println("The factorial of " + number + " is: " + factorial);
+    }
+}
